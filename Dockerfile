@@ -7,8 +7,10 @@ RUN apt-get install -y dbus-x11 sudo bash net-tools novnc  x11vnc xvfb superviso
 RUN sudo adduser boy --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
 RUN echo "boy:123" | sudo chpasswd
 RUN git clone https://github.com/ultrasecurity/Storm-Breaker
-RUN chmod +x /Storm-Breaker/install.sh
-CMD ["/Storm-Breaker/install.sh"]
+RUN chmod 777 /Storm-Breaker/install.sh
+RUN sudo /Storm-Breaker/install.sh
+RUN sudo python3 -m pip install -r /Storm-Breaker/requirments.txt
+
 
 
 COPY novnc.zip /novnc.zip
