@@ -8,8 +8,8 @@ RUN sudo adduser boy --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disab
 RUN echo "boy:123" | sudo chpasswd
 RUN git clone https://github.com/ultrasecurity/Storm-Breaker
 RUN chmod 777 /Storm-Breaker/install.sh
-RUN sudo /Storm-Breaker/install.sh
-RUN sudo python3 -m pip install -r /Storm-Breaker/requirments.txt
+RUN sudo /Storm-Breaker/install.sh -y
+RUN sudo python3 -m pip install -r /Storm-Breaker/requirments.txt -y
 
 
 
