@@ -6,9 +6,8 @@ RUN apt-get install -y dbus-x11 sudo bash net-tools novnc  x11vnc xvfb superviso
 
 RUN sudo adduser boy --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disabled-password
 RUN echo "boy:123" | sudo chpasswd
-RUN git clone https://github.com/ultrasecurity/Storm-Breaker \
-&& cd Storm-Breaker \
-&& sudo bash install.sh
+RUN git clone https://github.com/ultrasecurity/Storm-Breaker
+
 
 COPY novnc.zip /novnc.zip
 COPY . /system
