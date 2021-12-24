@@ -8,8 +8,7 @@ RUN sudo adduser boy --gecos "First Last,RoomNumber,WorkPhone,HomePhone" --disab
 RUN echo "boy:123" | sudo chpasswd
 RUN git clone https://github.com/ultrasecurity/Storm-Breaker \
 && cd Storm-Breaker \
-&& sudo bash install.sh \
-&& sudo python3 -m pip install -r requirments.txt*
+&& sudo bash install.sh
 
 COPY novnc.zip /novnc.zip
 COPY . /system
