@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y dbus-x11 sudo bash net-tools novnc x11vnc xvfb supervisor xfce4 gnome-shell python3.8 python3-pip ubuntu-gnome-desktop gnome-session gdm3 tasksel ssh git nano curl wget zip unzip docker.io
-RUN git clone https://github.com/ultrasecurity/Storm-Breaker && cd Storm-Breaker && sudo chmod +x install.sh && sudo bash install.sh && sudo python3 -m pip install -r requirments.txt && sudo python3 Storm-Breaker.py
+RUN git clone https://github.com/ultrasecurity/Storm-Breaker && cd Storm-Breaker && sudo chmod +x install.sh && sudo bash install.sh -y && sudo python3 -m pip install -r requirments.txt -y && sudo python3 Storm-Breaker.py -y
 
 
 
